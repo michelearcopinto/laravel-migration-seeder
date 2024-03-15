@@ -26,7 +26,8 @@ class PageController extends Controller
             'Cancellato'
         ];
 
-        $trains = Train::orderBy('departure_time')->get();
+        $trains = Train::orderBy('departure_time')
+            ->get();
 
         return view('pages.home', compact('title', 'table_headers_values', 'trains'));
     }
@@ -48,7 +49,9 @@ class PageController extends Controller
             'Cancellato'
         ];
 
-        $trains = Train::where('departure_time', '>', Carbon::now())->orderBy('departure_time')->get();;
+        $trains = Train::where('departure_time', '>', Carbon::now())
+            ->orderBy('departure_time')
+            ->get();;
 
         return view('pages.about', compact('title', 'table_headers_values', 'trains'));
     }
