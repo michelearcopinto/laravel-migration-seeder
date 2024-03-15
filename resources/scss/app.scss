@@ -52,3 +52,44 @@ header {
         }
     }
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th,
+    td {
+        border: 1px solid $table-border-color;
+        text-align: left;
+        padding: 8px;
+    }
+
+    th {
+        background-color: $table-header-color;
+    }
+
+    tr:nth-child(even) {
+        background-color: $table-even-row-color;
+    }
+}
+
+.filter-button {
+    width: fit-content;
+    display: block;
+    margin-inline: auto;
+    background-color: $background-button;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    transition: background-color 0.25s;
+
+    &:hover {
+        cursor: pointer;
+        text-decoration: none;
+        background-color: $background-button-hover;
+    }
+}

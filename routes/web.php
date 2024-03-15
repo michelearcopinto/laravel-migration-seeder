@@ -14,11 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [PageController::class, 'index'])->name('homePage');
+Route::get('/', [PageController::class, 'index'])->name('home_page');
 
-Route::get('/about', function () {
-
-    $lorem = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto aut excepturi deleniti cupiditate deserunt sint reprehenderit quibusdam tempore voluptas quis, nisi id voluptatibus quaerat repellat doloremque eum eos laborum eaque.';
-
-    return view('about', compact('lorem'));
-})->name('aboutPage');
+Route::get('/about', [PageController::class, 'index_filtered'])->name('filtered_page');
