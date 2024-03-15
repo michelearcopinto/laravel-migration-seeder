@@ -11,7 +11,6 @@ class PageController extends Controller
 {
     public function index()
     {
-
         $title = 'Lista Treni';
 
         $table_headers_values = [
@@ -26,16 +25,17 @@ class PageController extends Controller
             'Cancellato'
         ];
 
+        $table_row_class = '';
+
         $trains = Train::orderBy('departure_time')
             ->get();
 
-        return view('pages.home', compact('title', 'table_headers_values', 'trains'));
+        return view('pages.home', compact('title', 'table_headers_values', 'table_row_class', 'trains'));
     }
 
     public function index_filtered()
     {
-
-        $title = 'Lista Treni filtrati';
+        $title = 'Lista Treni disponibili';
 
         $table_headers_values = [
             'Azienda',
@@ -49,10 +49,12 @@ class PageController extends Controller
             'Cancellato'
         ];
 
+        $table_row_class = '';
+
         $trains = Train::where('departure_time', '>', Carbon::now())
             ->orderBy('departure_time')
             ->get();;
 
-        return view('pages.about', compact('title', 'table_headers_values', 'trains'));
+        return view('pages.about', compact('title', 'table_headers_values', 'table_row_class', 'trains'));
     }
 }

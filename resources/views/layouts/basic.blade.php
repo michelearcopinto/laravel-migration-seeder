@@ -14,6 +14,10 @@
 
 <body>
     <main>
+        <h1>{{ $title }}</h1>
+
+        @include('components.table')
+
         @yield('content')
     </main>
 </body>

@@ -34,23 +34,10 @@ button:hover {
 }
 
 h1 {
-    color: $font-color;
+    margin-bottom: 20px;
+    text-transform: uppercase;
     @include main-font-center;
-}
-
-header {
-    h1 {
-        color: $font-color-third;
-    }
-
-    nav {
-        ul {
-            display: flex;
-            align-items: center;
-            padding: 20px;
-            gap: 20px;
-        }
-    }
+    font-weight: 800;
 }
 
 table {
@@ -59,7 +46,7 @@ table {
 
     th,
     td {
-        border: 1px solid $table-border-color;
+        border: 1px solid black;
         text-align: left;
         padding: 8px;
     }
@@ -67,24 +54,20 @@ table {
     th {
         background-color: $table-header-color;
     }
-
-    tr:nth-child(even) {
-        background-color: $table-even-row-color;
-    }
 }
 
 .filter-button {
     width: fit-content;
     display: block;
     margin-inline: auto;
+    border: none;
     background-color: $background-button;
     color: white;
     font-size: 20px;
     font-weight: bolder;
-    border: none;
     border-radius: 4px;
     padding: 10px 20px;
-    margin-top: 20px;
+    margin-block: 20px;
     transition: background-color 0.25s;
 
     &:hover {
@@ -92,4 +75,16 @@ table {
         text-decoration: none;
         background-color: $background-button-hover;
     }
+}
+
+.train-green {
+    background-color: $green-pastel;
+}
+
+.train-yellow {
+    background-color: $yellow-pastel;
+}
+
+.train-red {
+    background-color: $red-pastel;
 }
