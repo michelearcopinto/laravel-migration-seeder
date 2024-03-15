@@ -4,15 +4,6 @@
 
 @section('style')
     <style>
-        main {
-            margin-top: 50px;
-            padding-inline: 50px;
-
-            li {
-                list-style-type: disc;
-                margin-left: 1rem;
-            }
-        }
     </style>
 @endsection
 

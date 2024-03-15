@@ -4,10 +4,6 @@
 
 @section('style')
     <style>
-        main {
-            margin-top: 50px;
-            padding-inline: 50px;
-        }
     </style>
 @endsection
 
